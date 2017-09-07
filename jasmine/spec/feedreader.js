@@ -90,10 +90,9 @@ $(function () {
      * function is called and completes its work, there is at least
      * a single .entry element within the .feed container.
      */
-    it('has at least an entry', function (done) {
-      let amountEntries = $('.entry-link .entry').length;
+    it('has at least an entry', function () {
+      let amountEntries = $('.feed .entry').length;
       expect(amountEntries).toBeGreaterThan(0);
-      done();
     });
   });
 
@@ -116,10 +115,9 @@ $(function () {
      * by the loadFeed function that the content actually changes.
      * Obs: loadFeed() is asynchronous.
      */
-    it('content changed', function (done) {
+    it('content changed', function () {
       expect(oldName).not.toEqual(newName);
       expect(oldUrl).not.toEqual(newUrl);
-      done();
     });
   });
 }());
